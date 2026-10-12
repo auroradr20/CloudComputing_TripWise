@@ -1,0 +1,32 @@
+.git
+.gitignore
+
+# Python
+.venv/
+venv/
+ap/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Secrets/local data
+.env
+.env.*
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+
+# Local/OS files
+.DS_Store
+.vscode/
+
+# Archives/backups
+*.zip
+requirements_old.txt
