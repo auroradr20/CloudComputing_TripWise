@@ -32,7 +32,7 @@ function AuthForm({ user, setUser }) {
     const endpoint = mode === "login" ? "login" : "register";
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/${endpoint}`, {
+      const response = await fetch(`http://127.0.0.1:5001/${endpoint}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

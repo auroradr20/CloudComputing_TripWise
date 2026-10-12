@@ -14,7 +14,7 @@ function YourTrips({ user, latestTripId, setLatestTripId, tripsRefreshKey }) {
     setMessage("");
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/trips/");
+      const response = await fetch("http://127.0.0.1:5001/trips/");
       const data = await response.json();
 
       if (!response.ok) {
@@ -55,7 +55,7 @@ function YourTrips({ user, latestTripId, setLatestTripId, tripsRefreshKey }) {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/trips/${tripId}`, {
+      const response = await fetch(`http://127.0.0.1:5001/trips/${tripId}`, {
         method: "DELETE",
       });
 

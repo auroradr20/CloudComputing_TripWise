@@ -17,7 +17,7 @@ function MysteryTrip({ user, setLatestTripId, refreshTrips }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/users/${user.user_id}/itinerary/random`,
+        `http://127.0.0.1:5001/users/${user.user_id}/itinerary/random`,
         {
           method: "POST",
         }

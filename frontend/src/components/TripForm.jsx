@@ -100,7 +100,7 @@ function TripForm({ user, setLatestTripId, refreshTrips }) {
     setMessage("");
 
     try {
-      const tripResponse = await fetch("http://127.0.0.1:5000/trips/", {
+      const tripResponse = await fetch("http://127.0.0.1:5001/trips/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -116,7 +116,7 @@ function TripForm({ user, setLatestTripId, refreshTrips }) {
       }
 
       const itineraryResponse = await fetch(
-        `http://127.0.0.1:5000/trips/${tripData.trip_id}/itinerary/generate`,
+        `http://127.0.0.1:5001/trips/${tripData.trip_id}/itinerary/generate`,
         {
           method: "POST",
           headers: {

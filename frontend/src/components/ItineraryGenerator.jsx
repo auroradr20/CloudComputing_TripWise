@@ -17,7 +17,7 @@ function ItineraryGenerator({ latestTripId }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/trips/${tripId}/itinerary`
+        `http://127.0.0.1:5001/trips/${tripId}/itinerary`
       );
 
       const data = await response.json();
@@ -44,7 +44,7 @@ function ItineraryGenerator({ latestTripId }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/trips/${tripId}/itinerary/summary`
+        `http://127.0.0.1:5001/trips/${tripId}/itinerary/summary`
       );
 
       const data = await response.json();
@@ -68,7 +68,7 @@ function ItineraryGenerator({ latestTripId }) {
   async function handleStatusChange(itineraryId, status) {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/itinerary/${itineraryId}`,
+        `http://127.0.0.1:5001/itinerary/${itineraryId}`,
         {
           method: "PUT",
           headers: {
@@ -105,7 +105,7 @@ function ItineraryGenerator({ latestTripId }) {
   async function handleReplaceActivity(itineraryId) {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/itinerary/${itineraryId}/replace`,
+        `http://127.0.0.1:5001/itinerary/${itineraryId}/replace`,
         {
           method: "POST",
         }
@@ -139,7 +139,7 @@ function ItineraryGenerator({ latestTripId }) {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/itinerary/${itineraryId}`,
+        `http://127.0.0.1:5001/itinerary/${itineraryId}`,
         {
           method: "DELETE",
         }
